@@ -1,0 +1,170 @@
+.questions {
+        .container{
+            width: 60%;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5em 0 20em 40em;
+
+            @include mobile{
+                max-width: 100%;
+                padding: 0 0 10em;
+            }
+        
+          .question-form{
+                    p{
+                        font-family: $fontSecondary;
+                        font-size: 8em;
+                        font-weight: 600;
+                        letter-spacing: 0.3em;
+                        color: $mainColor;
+                        padding: 2em 0 1em 0;
+
+                        @include mobile{
+                            font-size: 4.3em;
+                        }
+                    }
+                
+
+        .form-row{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+            .form-label{
+                font-family: $fontSecondary;
+                font-size: 4em;
+                font-weight: 600;
+                letter-spacing: 0.6em;
+                color: $mainColor;
+                padding: 1em 0 1em 0;
+
+                @include mobile{
+                    font-size: 3em;
+                }
+            }
+
+
+            input {
+                outline: none;
+                appearance: none;
+                border: white;
+                border-bottom: 0.2em solid #95989A;
+                padding: 2em;
+            }
+            input:focus {
+                border-color: $mainColor;
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea {
+              padding: 2em;
+              box-sizing: border-box;
+              outline: none;
+              appearance: none;
+              border: white;
+              border-bottom: 0.2em solid #95989A;
+              font-size: 3em;
+
+              @include mobile{
+                font-size: 2em;
+            }
+            
+            
+                &:focus {
+                    border-color: $mainColor;
+                }
+            }
+            
+            .checked-form{
+                display: flex;
+                flex-direction: row;
+                padding-top: 7em;
+            }
+            input[type="checkbox"] {
+                -webkit-appearance: none;
+                -moz-appearance:    none;
+                appearance:         none;
+               
+                width: 6em;
+                height: 6em;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 2em;
+                border-bottom: 0.2em solid #95989A;
+                background: white;
+                outline: none;
+                position: relative;
+                padding: 2em;
+                font-size: 1.3em;
+
+                @include mobile{
+                    width: 2.5em;
+                    height: 2.5em;
+                    border-radius: 1.5em;
+                }
+            }
+            .checkbox:checked{
+                background: white;
+                border: 0.2em solid  $mainColor;
+            }
+            .checkbox:checked:after{
+                content: "";
+                width: 2.5em;
+                height: 2.5em;
+                border-radius: 40%;
+                background: url(../assets/checkmark.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center; 
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            .checkmark{
+                text-align: left;
+                font-family: $fontSecondary;
+                font-size: 2.5em;
+                font-weight: 300;
+                color: $mainColor;
+                line-height: 1;
+                padding-left: 2em;
+                padding-bottom: 4em;
+                padding-top: 0.3em;
+
+                @include mobile{
+                    font-size: 1.4em;
+                }
+                
+            }
+        }
+
+
+    .form-button{
+        color: white;
+        background: $mainColor;
+        border-radius: 5em;
+        width: 17em;
+        height: 3em;
+        font-size: 4em;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+
+        @include mobile{
+            width: 10em;
+            height: 2em;
+        }
+    }
+
+    
+    }
+    }
+}

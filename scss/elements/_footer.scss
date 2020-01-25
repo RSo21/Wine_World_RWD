@@ -1,0 +1,51 @@
+.footer{
+    background-color: #F7F7F7;
+    box-shadow: 0px -0.25em 2em $mainColor;
+
+     .container{
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-logo {
+            p{
+            text-align: left;
+            font-size: 2.5em;
+            letter-spacing: 0;
+            color: #A5A5A5;
+            padding-top: 1em;
+            }
+        
+
+        .footer-logo-text{
+            text-align: left;
+            font-size: 7em;
+            font-weight: 300;
+            letter-spacing: 0;
+            color: $mainColor;
+            text-decoration: none; 
+        }
+}
+
+        .footer-icons{
+            display: flex;
+            flex-direction: row;
+            padding-left: 4em;
+
+            .twitter{
+                background: url(../assets/Twitter.svg);
+                background-repeat: no-repeat;
+                width: 7em;
+                height: 7em;
+                padding: 0 5em;
+            }
+            .fb{
+                background: url(../assets/Facebook.svg);
+                background-repeat: no-repeat;
+                width: 7em;
+                height: 7em;
+            }
+        }
+    }
+}

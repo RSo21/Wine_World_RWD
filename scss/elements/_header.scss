@@ -1,0 +1,114 @@
+.page-header{
+    box-shadow: 0 0.25em 2em $mainColor;
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+
+    .container{
+        height: 17.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+    }
+}
+.page-logo{
+    text-align: left;
+    font-size: 8em;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: $black;
+    text-decoration: none; 
+
+}
+.page-logo p::first-letter{
+    color: $mainColor;
+}
+span::first-letter{
+    color: $mainColor;
+}
+.page-nav{
+    display: flex;
+
+    @include mobile{
+        position: fixed;
+        top: 5em;
+        right: 5em;
+        
+    }
+}
+
+#menu-trigger{
+    background-image: url(../assets/menu.png);
+    width: 8em;
+    height: 8em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 0.5em;
+    margin-left: 2em;
+
+}
+.page-nav-list{
+    list-style: none;
+    padding:0;
+    margin:0;
+    display: flex;
+      
+      li{
+        margin-left: 9em;
+        padding: 5.5em 0 5em 0;
+        
+        @include mobile{
+            background-color: $black;
+            color: $white;
+            padding-right: 10em;
+            padding-left: 10em;
+  
+        }
+        
+        &:hover{
+          padding: 5.5em 0 5em 0;
+
+          @include mobile{
+            // padding-right: 3em;
+            // padding-left: 3em;
+            padding-right: 10em;
+            padding-left: 10em;
+          }
+        }
+      }
+
+      a{
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        font-size: 3.5em;
+        font-family: $fontSecondary;
+        font-weight: 700;
+        letter-spacing: 0.5em;
+        background-color: $white;
+        color: $black; 
+
+        @include mobile{
+            background-color: $black;
+            color: $white;
+     
+        }
+
+        &:hover{
+            color: $mainColor; 
+        }
+
+ 
+  }
+}
+
+
+
+    
+
+    

@@ -1,0 +1,399 @@
+.banner{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    width: 100%;
+    height: 20em;
+
+    .bannerContainer{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+
+    }
+
+    p{
+    text-align: center;
+    padding: 0 2em 0 2em;
+    &:first-of-type{
+        font-family: $fontPrimary;
+        font-size: 2.2em;
+        padding-bottom: 0.5em;
+
+        @include tablet{
+            font-size: 1.5em
+        }
+
+        @include mobile {
+            font-size: 1.2em;
+            text-align: center;
+    }
+        
+    }
+    &:last-of-type{
+        font-family: $fontSecondary;
+        font-size: 1.2em;
+        opacity: 0.9;
+
+        @include tablet{
+            font-size: 1.2em
+        }
+
+        @include mobile {
+            font-size: 1em;
+            text-align: center;
+    }
+    }
+
+}
+
+.leftArrow,
+.rightArrow{
+   font-size: 3em;
+   padding-top: 1em;
+   color: white;
+
+        @include tablet{
+            font-size: 2.5em;
+        }
+
+        @include mobile{
+            font-size: 1.6em;
+        }
+}
+
+.bannerSlider {
+    display: none;
+  }
+  .bannerSliderVisible {
+    display: block;
+  }
+}
+
+.banner-photo{
+    background-image: url(../assets/tim-mossholder-V0UvHFGSFGI-unsplash.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        @include mobile {
+            width: 100%;
+            height: 70vh;
+    }
+}
+
+.page-article {
+    flex-direction: column;
+    display: flex;
+
+    .container {
+        width: 100vw;
+        margin: 25em auto;
+        justify-content: space-around;
+        display: flex;
+
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .article {
+            text-align: center;
+            max-width: 20%;
+        
+            @include mobile {
+                max-width: 40%;
+            }
+
+            .article-photo {
+                width: 90%;
+                height: 70%;
+                margin: 0 auto;
+                display: block;
+                border-radius: 50%;
+                overflow: hidden;
+
+            }
+
+            .article-photo-img {
+                width: 100%;
+                height: 100%;
+            
+            }
+
+            .article-title {
+                text-transform: uppercase;
+                font-weight: 600;
+                margin: 2em auto;
+                font-size: 4em;
+            }
+            .article-text {
+                color: $articleTextColor;
+                margin-bottom: 2em;
+                font-size: 3em;
+            }
+            .article-btn {
+                padding: 0.7em 2em;
+                font-size: 4em;
+                border: 0.1em solid $mainColor;
+                color: $mainColor;
+                display: inline-block;
+                text-decoration: none;
+                border-radius: 5em;
+
+                @include mobile{
+                    margin-bottom: 1em;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+.page-content{
+    background: #F7F7F7;
+
+        .container{
+            height: 200vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+           
+
+            .page-content-first,
+            .page-content-second{
+                background: #fff;
+                height: 55vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                @include mobile{
+                    height: 45vh;
+                    .page-content-first-photo,
+                    .page-content-second-photo{
+                        display: none;
+                    }
+                }
+
+                .first-line,
+                .second-line
+                {
+                    margin-left: 10em;
+                    @include line;
+
+                    @include mobile{
+                        margin-left: 1.5em;
+                    }
+                    }
+
+
+        .page-content-first-text,
+        .page-content-second-text{
+            font-family: $fontPrimary;
+            width: 70%;
+
+            p{
+                &:first-of-type{
+                    font-size: 6em;
+                    font-weight: 400;
+                    padding: 4em 0 2em 2.5em;
+
+                    @include mobile{
+                        padding: 4em 0 2em 1em;
+                        font-size: 4em;
+                    }
+                }
+                &:last-of-type{
+                    font-family: $fontSecondary;
+                    font-size: 4em;
+                    font-weight: 400;
+                    padding: 0 0 2em 2.5em;
+                    line-height: 1.5;
+
+                    @include mobile{
+                        padding: 0 0 2em 1em;
+                        font-size: 3em;
+                    }
+                }
+            }
+
+            @include mobile{
+                width: 80%;
+            }
+
+        }
+
+        .page-content-first-photo{
+            width: 40%;
+            position: relative;
+            z-index: 0;
+        
+        &:before{
+            width: 45%;
+            height: 45%;
+            background: $mainColor;
+            border-radius: 6em;
+            transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 20em;
+            left: 20em;
+
+        }
+        &:after{
+            background-image: url(../assets/cheese1.png);
+            height: 45%;
+            width: 45%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center; 
+            content: "";
+            position: absolute;
+            z-index: 2 ;
+            top: 30em;
+            left: 10em;
+  
+        }
+        }
+
+
+        .page-content-second-photo{
+            width: 40%;
+            position: relative;
+            z-index: 0;
+    }
+        .page-content-second-photo::before{
+            width: 70%;
+            height: 60%;
+            background: $mainColor;
+            border-radius: 50%;
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 10em;
+            left: 20em;
+    }
+        .page-content-second-photo::after{
+            background-image: url(../assets/grapes.png);
+            height: 40%;
+            width: 30%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center; 
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: 25em;
+            left: 45em;
+    }
+
+        }
+
+        .page-content-third{
+            height: 55vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+            }
+
+                .third-line
+                {
+                    margin-left: 10em;
+                    @include line;
+
+                    @include mobile{
+                        margin-left: 1.5em;
+                    }
+                    }
+            p{
+                &:first-of-type{
+                    font-size: 6em;
+                    font-weight: 400;
+                    padding: 3em 0 2em 2.5em;
+                   
+                    @include mobile{
+                        padding: 4em 0 2em 1em;
+                        font-size: 4em;
+                    }
+
+                }
+                &:last-of-type{
+                    font-family: $fontSecondary;
+                    font-size: 4em;
+                    font-weight: 400;
+                    padding: 0 0 2.5em 2.5em;
+                    line-height: 1.5;
+
+                    @include mobile{
+                        padding: 0 0 2em 1em;
+                        font-size: 3em;
+                    }
+                }
+            }
+
+
+            .page-content-third-text{
+                font-family: $fontPrimary;
+                width: 65%;
+                height: 70%;
+                padding-left: 5em;
+                background: $white;
+
+                @include mobile{
+                    width: 100%;
+                }
+
+            }
+            .page-content-third-photo{
+                width: 30%;
+                height: 70%;
+                background-color: $mainColor;
+                display: flex;
+                position: relative;
+                z-index: 0;
+            
+            &:before{
+                content: "";
+                position: absolute;
+                z-index: 1;
+                background-image: url(../assets/Wine_Bottle_and_Glass_PNG_Vector_Clipart.png);
+                width: 20%;
+                height: 55%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20em 0 0 40em;
+
+                
+                }
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
