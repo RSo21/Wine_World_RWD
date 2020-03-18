@@ -47,7 +47,7 @@ toggle.addEventListener("click", function () {
 
 
 
-//
+
 let leftArrow = document.querySelector('.leftArrow');
 let rightArrow = document.querySelector('.rightArrow');
 let sliders = document.querySelectorAll('.bannerSlider');

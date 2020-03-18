@@ -1,5 +1,4 @@
 .banner{
-
     display:flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +27,7 @@
         }
 
         @include mobile {
-            font-size: 1.2em;
+            font-size: 0.7em;
             text-align: center;
     }
         
@@ -43,7 +42,7 @@
         }
 
         @include mobile {
-            font-size: 1em;
+            font-size: 0.6em;
             text-align: center;
     }
     }
@@ -61,7 +60,7 @@
         }
 
         @include mobile{
-            font-size: 1.6em;
+            font-size: 1.4em;
         }
 }
 
@@ -86,9 +85,9 @@
 
         @include mobile {
             width: 100%;
-            height: 70vh;
+            height: 55vh;
     }
-}
+ }
 
 .page-article {
     flex-direction: column;
@@ -103,6 +102,7 @@
         @include mobile{
             flex-direction: column;
             align-items: center;
+            margin: 10em auto;;
         }
 
         .article {
@@ -168,10 +168,14 @@
     background: #F7F7F7;
 
         .container{
-            height: 200vh;
+            height: 190vh;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+
+                @include mobile{
+                    height: 130vh;
+                }
            
 
             .page-content-first,
@@ -183,7 +187,7 @@
                 justify-content: space-evenly;
 
                 @include mobile{
-                    height: 45vh;
+                    height: 35vh;
                     .page-content-first-photo,
                     .page-content-second-photo{
                         display: none;
@@ -191,15 +195,14 @@
                 }
 
                 .first-line,
-                .second-line
-                {
+                .second-line{
                     margin-left: 10em;
-                    @include line;
 
                     @include mobile{
+                        width: 50vw;
                         margin-left: 1.5em;
                     }
-                    }
+                }
 
 
         .page-content-first-text,
@@ -234,6 +237,7 @@
 
             @include mobile{
                 width: 80%;
+                height: 60%;
             }
 
         }
@@ -312,22 +316,21 @@
             justify-content: space-between;
 
             @include mobile{
+                width: 100%;
+                height: 45vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 100%;
-
             }
 
-                .third-line
-                {
+                .third-line{
                     margin-left: 10em;
-                    @include line;
 
                     @include mobile{
+                        width: 50vw;
                         margin-left: 1.5em;
                     }
-                    }
+                }
             p{
                 &:first-of-type{
                     font-size: 6em;
@@ -364,6 +367,8 @@
 
                 @include mobile{
                     width: 100%;
+                    height: 75%;
+                    padding: 0 5em;
                 }
 
             }

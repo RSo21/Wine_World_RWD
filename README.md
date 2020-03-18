@@ -1,6 +1,7 @@
 # Wine_World_RWD
 
-This project is an exercise in creating a responsive website.
+This project is an exercise in creating a responsive website. Only
+desktop and mobile version. 
 
 ## Technologies
 
@@ -9,4 +10,7 @@ This project is an exercise in creating a responsive website.
 * JavaScript
 * SASS
 
+## Demo
+
+Try this working demo: [WineWorld]()
 
