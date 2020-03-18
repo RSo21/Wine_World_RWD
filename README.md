@@ -5,12 +5,12 @@ desktop and mobile version.
 
 ## Technologies
 
-* HTML
-* CSS
+* HTML5
+* CSS3
 * JavaScript
 * SASS
 
 ## Demo
 
-Try this working demo: [WineWorld]()
+Try this working demo: [WineWorld](https://rso21.github.io/Wine_World_RWD/)
 
